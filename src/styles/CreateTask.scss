@@ -1,0 +1,76 @@
+.create-form-container {
+  .create-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 3px;
+
+    .section-title {
+      margin: 0 0 1rem 0;
+      align-self: flex-start;
+      font-family: Avenir;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 22px;     
+      color: #31343A;
+    }
+  
+
+    .task-name-container {
+      label {
+        font-family: Avenir;
+        font-size: 14px;
+        line-height: 12px;        
+        color: #788999;
+      }
+      .task-name {
+        width: 280px;
+        height: 35px;
+        margin: .5rem 0;
+
+        border: 1px solid #E7EAF3;
+        box-sizing: border-box;
+        border-radius: 2px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .btns-container {
+      &.create {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 0 0 1rem 0;
+
+        .create-btn {
+          padding: 0;
+          border: none;
+          font-family: Avenir;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: uppercase;
+          
+          background: transparent;
+          color: #0E6CC2;
+  
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

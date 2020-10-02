@@ -1,0 +1,105 @@
+.wrapper {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: fixed;
+  top: 0rem;
+
+  width: 100%;
+  height: 100%;
+
+  .container {
+    z-index: 1;
+    position: fixed;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  
+    max-width: 15rem;
+    max-height: 10rem;
+    width: 100%;
+    height: 100%;
+  
+    color: white;
+    overflow: hidden;
+
+    transition: all 1s;
+
+    &.create {
+      max-width: 340px;
+      max-height: 180px;
+      width: 100%;
+      height: 100%;
+      
+      color: white;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 20px rgba(4, 75, 120, 0.1);
+      border-radius: 3px;
+
+      .title {
+        display: none;
+      }
+    }
+
+    &.edit {
+      .title {
+        display: none;
+      }
+    }
+
+    &.delete {
+      
+    }
+  
+    .close_btn {
+      position: absolute;
+      top: 1.8rem;
+      right: 2rem;
+      width: 0.8rem;
+      height: 0.8rem;
+  
+      background: url("../assets/icons/cross.svg") no-repeat center center/contain;
+      border: none;
+      outline: none;
+  
+      &:hover, &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  
+    .title {
+  
+    }
+  
+    .message {
+      padding: .5rem;
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    align-items: initial;
+
+    .container {
+      &.create {
+        top: 7rem;
+      }
+
+      &.edit, &.delete {
+        top: 15rem;
+      }
+    }
+  }
+}

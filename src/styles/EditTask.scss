@@ -1,0 +1,212 @@
+.edit-page {
+  .header {
+    padding-left: 2rem;
+
+    .nav-back-container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 6.5rem;
+      margin: 1rem 0;
+      padding: .5rem 0;
+      text-decoration: none;
+
+      .nav-back-icon {
+        display: flex;
+        width: 10px;
+        height: 10px;
+        background: url('../assets/icons/arrow_left.svg') no-repeat;
+        background-size: contain;
+      }
+  
+      .nav-back-text {
+        font-family: Avenir;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 7px;
+        color: #31343A;
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  .edit-form-container {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+  
+    form {
+      display: flex;
+      width: 100%;  
+    }
+  
+    .edit-form-left, .edit-form-right {
+      height: 100vh;
+      border-top: 0.1rem solid #E7EAF3;
+      box-sizing: border-box;
+
+      .section-title {
+        margin: 1rem 0;
+        font-family: Avenir;
+        font-size: 1.6rem;
+        line-height: 1.2rem;
+        font-weight: 500;
+        color: #31343a;
+      }
+    }
+  
+    .edit-form-left {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-end;
+      flex-basis: 60%;
+      padding: 1rem;
+  
+      .task-name-container {
+        position: absolute;
+        top: -5rem;
+        left: 2rem;
+        align-self: start;
+        max-width: 600px;
+        width: 100%;
+  
+        .task-name {
+          width: 100%;
+          height: 44px;
+          padding: 0.5rem;
+          font-family: Avenir;
+          font-size: 1.8rem;
+          font-weight: 500;
+          line-height: 2.2rem;
+          color: #31343A;
+  
+          border: 0.05rem solid #E7EAF3;
+          border-radius: 0.3rem;
+        }
+      }
+  
+      .shedule-panel {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        min-width: 20rem;
+        width: 80%;
+        height: 8rem;
+        margin-bottom: 5rem;
+  
+        .shedule-fields, .shedule-controls {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+
+          .field-title {
+            min-width: 5rem;
+            width: 100%;
+            padding-right: .5rem;
+            font-family: Avenir;
+            font-size: 14px;
+            line-height: 22px;
+            color: #788999;
+
+            &:hover {
+              cursor: pointer;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+  
+      .description-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        min-width: 20rem;
+        width: 80%;
+        height: 8rem;
+  
+        .description {
+          max-width: 66.2rem;
+          min-height: 10rem;
+          padding: .5rem;
+          margin: .5rem 0 0 0;
+    
+          font-family: Avenir;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+          border: .05rem solid #e7eaf3;
+          border-radius: 3px;
+        }
+
+        label {
+          min-width: 5rem;
+          width: 100%;
+          padding-right: .5rem;
+          font-family: Avenir;
+          font-size: 14px;
+          line-height: 22px;
+          color: #788999;
+        }
+      }
+    }
+  
+    .edit-form-right {
+      display: flex;
+      flex-flow: column nowrap;
+      flex-basis: 40%;
+      padding: 1rem;
+  
+      background: #F8F9FC;
+
+      .section-title {
+        margin: 1.8rem 0 1rem;
+      }
+    }
+  
+    .btns-container {
+      &.edit {
+        position: absolute;
+        top: -4.75rem;
+        right: 2rem;
+
+        .save-btn, .cancel-btn {
+          min-width: 63px;
+          height: 36px;
+          margin: 0 5px;
+
+          font-family: Avenir;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 14px;
+          border-radius: 3px;
+          text-transform: uppercase;
+
+          &:hover {
+            cursor: pointer;
+            opacity: .8;
+            outline: none;
+          }
+        }
+
+        .save-btn {
+          color: #FFFFFF;
+          background: #19B385;
+          border: 0.1rem solid #19B385;
+        }
+        .cancel-btn {
+          color: #2F4858;
+          background: #E7EAF3;
+          border: 0.1rem solid #E7EAF3;
+        }
+      }
+    } 
+  }
+}
