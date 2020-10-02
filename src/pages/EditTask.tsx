@@ -24,6 +24,7 @@ import '@/styles/Pickers.scss';
 
 import { ITask, IUser } from 'types';
 import { IMatchParams } from 'types/router';
+import { PUBLIC_PATH } from '../routes';
 
 interface Props {
   match: IMatchParams,
@@ -113,14 +114,14 @@ const EditTask: React.FunctionComponent<Props> = ({
     };
 
     updateTask(taskId, newTask);
-    history.push('/');
+    history.push(PUBLIC_PATH);
   }
 
   return (
     <div className="container edit-page">
       <div className="header">
         <NavLink
-          to="/"
+          to={PUBLIC_PATH}
           className="nav-back-container"
         >
           <span className="nav-back-icon" />
@@ -209,7 +210,7 @@ const EditTask: React.FunctionComponent<Props> = ({
             <button
               className="cancel-btn"
               type="submit"
-              onClick={() => history.push('/')}
+              onClick={() => history.push(PUBLIC_PATH)}
             >
               Cancel
             </button>
