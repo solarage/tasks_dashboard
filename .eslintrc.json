@@ -1,0 +1,40 @@
+{
+  "env": {
+  "node": true,
+  "browser": true,
+  "es6": true,
+  "es2017": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "max-len": [2, 80, { "ignoreUrls": true }],
+    "quotes": [2, "single"],
+    "quote-props": [1, "consistent"],
+    "comma-dangle": ["error", "never"],
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "react/jsx-filename-extension": [1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ]
+  }
+}
